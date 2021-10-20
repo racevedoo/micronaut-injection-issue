@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "micronaut.injection.issue";
+option java_outer_classname = "MicronautInjectionIssue";
+option objc_class_prefix = "HLW";
+
+package micronaut.injection.issue;
+
+service MicronautInjectionIssueService {
+  rpc send (MicronautInjectionIssueRequest) returns (MicronautInjectionIssueReply) {}
+}
+
+message MicronautInjectionIssueRequest {
+  string name = 1;
+}
+
+message MicronautInjectionIssueReply {
+  string message = 1;
+}
